@@ -1,0 +1,24 @@
+<MainScreen>:
+    BoxLayout:
+        size_hint: None, None
+        size: "130dp", "60dp"
+        spacing: "10dp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+        Button:
+            text: 'Search for \ningredients'
+            on_press: root.manager.current = 'search'
+        Button:
+            text: 'Quit'
+
+<SearchScreen>:
+    BoxLayout:
+        size_hint: None, None
+        size: "130dp", "60dp"
+        spacing: "10dp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+        Button:
+            text: 'Search'
+            on_press: root.searching()
+        Button:
+            text: 'Back to \nmain'
+            on_press: root.manager.current = 'main'
